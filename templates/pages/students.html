@@ -1,0 +1,82 @@
+{% extends "index.html" %}
+{% block table %}
+<div class="content">
+    <h2>Донишчуён</h2>
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Насаб</th>
+      <th>Ном</th>
+      <th>Нест</th>
+      <th>Хаст</th>
+      <th>Рафт</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for person in people %}
+    <tr>
+      <td>{{ person.sirname }}</td>
+      <td>{{ person.name }}</td>
+         {% csrf_token %}
+      <td>
+        <button
+          class="sendMessage"
+          data-person-status="Нест"
+          data-person-pk="{{ person.pk }}"
+        >
+          Нест
+        </button>
+           <td>
+        <button
+          class="sendMessage"
+          data-person-status="Хаст"
+          data-person-pk="{{ person.pk }}"
+        >
+          Хаст
+        </button>
+    </td>
+         <td>
+          <button
+          class="sendMessage"
+          data-person-status="Рафт"
+          data-person-pk="{{ person.pk }}"
+        >
+          Рафт
+        </button>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+</div>
+  <script>
+  $(document).ready(function () {
+    $(document).on("click", ".sendMessage", function () {
+      const pk = $(this).data("personPk");
+      const personStatus = $(this).data("personStatus");
+      const csrf_token = $('input[name = "csrfmiddlewaretoken"]').attr('value');
+        $.ajax({
+        url: "/send",
+        type: "POST",
+        data: {
+          'csrfmiddlewaretoken': csrf_token,
+          pk,
+          personStatus,
+        },
+        error: function () {
+          alert("Ошибка получения запроса");
+        },
+        success: function (response) {
+
+        },
+      });
+
+    });
+  });
+</script>
+{% endblock table %}
+
+
+

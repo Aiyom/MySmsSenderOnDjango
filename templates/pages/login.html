@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+
+{% block login %}
+    <div style="margin-top: 8%;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <h1 class="text-center">Сайт посищение студентов "ОБРценИ"</h1>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Войдите в систему</h4>
+
+                        <form method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="next" value="{{ next }}">
+
+                            {{ form|crispy }}
+
+                            <button type="submit" class="btn btn-primary btn-block">Вход</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock login %}

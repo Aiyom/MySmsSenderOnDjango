@@ -1,0 +1,175 @@
+{% extends "index.html" %}
+
+{% block kurs %}
+    <div class="content">
+        <h2>Курсҳо</h2>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Номи курс</th>
+                <th>Рӯзҳои ҳафта</th>
+                <th>Соат</th>
+                <th>Номи курс</th>
+                <th>Рӯзҳои ҳафта</th>
+                <th>Соат</th>
+                <th>Номи курс</th>
+                <th>Рӯзҳои ҳафта</th>
+                <th>Соат</th>
+            </tr>
+            </thead>
+            <tbody>
+            <form action="{% url 'students' %}" method="GET">
+                {% csrf_token %}
+                <tr>
+                    <td rowspan="5"><h6 style="margin-top: 100%">Англисӣ</h6></td>
+                    <td><a href="{% url 'students' %}?time=8&date=246&kurs=1&group=1" class="badge badge-primary">Ду.Чор.Ҷӯм</a><br>
+                        <a class="badge badge-primary" href="{% url 'students' %}?time=8&date=357&kurs=1&group=1">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>08:00</label></td>
+                    <td rowspan="5"><h6 style="margin-top: 100%">Руси</h6></td>
+                    <td><a href="{% url 'students' %}?time=8&date=246&kurs=2&group=1" class="badge badge-primary">Ду.Чор.Ҷӯм</a><br>
+                        <a class="badge badge-primary" href="{% url 'students' %}?time=8&date=357&kurs=2&group=1">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>08:00</label></td>
+                    <td rowspan="5"><h6 style="margin-top: 100%">Компютерӣ</h6></td>
+                    <td><a href="{% url 'students' %}?time=8&date=246&kurs=3&group=1" class="badge badge-primary">Ду.Чор.Ҷӯм</a><br>
+                        <a class="badge badge-primary" href="{% url 'students' %}?time=8&date=357&kurs=3&group=1">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>08:00</label></td>
+                </tr>
+                <tr>
+                    <td><a href="{% url 'students' %}?time=10&date=246&kurs=1&group=1"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=10&date=357&kurs=1&group=1">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>10:00</label></td>
+                    <td><a href="{% url 'students' %}?time=10&date=246&kurs=2&group=1"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=10&date=357&kurs=2&group=1">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>10:00</label></td>
+                    <td><a href="{% url 'students' %}?time=10&date=246&kurs=3&group=1"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=10&date=357&kurs=3&group=1">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>10:00</label></td>
+                </tr>
+                <tr>
+                    <td><a href="{% url 'students' %}?time=14&date=246&kurs=1&group=1"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=14&date=357&kurs=1&group=1">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>14:00</label></td>
+                    <td><a href="{% url 'students' %}?time=14&date=246&kurs=2&group=1"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=14&date=357&kurs=2&group=1">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>14:00</label></td>
+                    <td><a href="{% url 'students' %}?time=14&date=246&kurs=3&group=1"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=14&date=357&kurs=3&group=1">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>14:00</label></td>
+                </tr>
+                <tr>
+                    <td><a href="{% url 'students' %}?time=16&date=246&kurs=1&group=1"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=16&date=357&kurs=1&group=1">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>16:00</label></td>
+                    <td><a href="{% url 'students' %}?time=16&date=246&kurs=2&group=1"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=16&date=357&kurs=2&group=1">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>16:00</label></td>
+                    <td><a href="{% url 'students' %}?time=16&date=246&kurs=3&group=1"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=16&date=357&kurs=3&group=1">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>16:00</label></td>
+                </tr>
+                <tr>
+                    <td><a href="{% url 'students' %}?time=18&date=246&kurs=1&group=1"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=18&date=357&kurs=1&group=1">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>18:00</label></td>
+                    <td><a href="{% url 'students' %}?time=18&date=246&kurs=2&group=1"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=18&date=357&kurs=2&group=1">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>18:00</label></td>
+                    <td><a href="{% url 'students' %}?time=18&date=246&kurs=3&group=1"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=18&date=357&kurs=3&group=1">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>18:00</label></td>
+                </tr>
+                <tr>
+                    <td rowspan="5"><h6 style="margin-top: 100%">Англисӣ 2</h6></td>
+                    <td><a href="{% url 'students' %}?time=8&date=246&kurs=1&group=2" class="badge badge-primary">Ду.Чор.Ҷӯм</a><br>
+                        <a class="badge badge-primary" href="{% url 'students' %}?time=8&date=357&kurs=1&group=2">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>08:00</label></td>
+                    <td rowspan="5"><h6 style="margin-top: 100%">Англисӣ 3</h6></td>
+                    <td><a href="{% url 'students' %}?time=8&date=246&kurs=1&group=3" class="badge badge-primary">Ду.Чор.Ҷӯм</a><br>
+                        <a class="badge badge-primary" href="{% url 'students' %}?time=8&date=357&kurs=2&group=3">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>08:00</label></td>
+
+                </tr>
+                <tr>
+                    <td><a href="{% url 'students' %}?time=10&date=246&kurs=1&group=2"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=10&date=357&kurs=1&group=2">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>10:00</label></td>
+                    <td><a href="{% url 'students' %}?time=10&date=246&kurs=1&group=3"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=10&date=357&kurs=2&group=3">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>10:00</label></td>
+                </tr>
+                <tr>
+                    <td><a href="{% url 'students' %}?time=14&date=246&kurs=1&group=2"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=14&date=357&kurs=1&group=2">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>14:00</label></td>
+                    <td><a href="{% url 'students' %}?time=14&date=246&kurs=1&group=3"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=14&date=357&kurs=2&group=3">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>14:00</label></td>
+
+                </tr>
+                <tr>
+                    <td><a href="{% url 'students' %}?time=16&date=246&kurs=1&group=2"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=16&date=357&kurs=1&group=2">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>16:00</label></td>
+                    <td><a href="{% url 'students' %}?time=16&date=246&kurs=1&group=3"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=16&date=357&kurs=3&group=3">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>16:00</label></td>
+                </tr>
+                <tr>
+                    <td><a href="{% url 'students' %}?time=18&date=246&kurs=1&group=2"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=18&date=357&kurs=1&group=2">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>18:00</label></td>
+                    <td><a href="{% url 'students' %}?time=18&date=246&kurs=1&group=3"
+                           class="badge badge-primary">Ду.Чор.Ҷӯм</a><br> <a class="badge badge-primary"
+                                                                             href="{% url 'students' %}?time=18&date=357&kurs=2&group=3">Се.Пан.Шан</a>
+                    </td>
+                    <td><label>18:00</label></td>
+                </tr>
+            </form>
+            </tbody>
+        </table>
+
+    </div>
+{% endblock kurs %}
