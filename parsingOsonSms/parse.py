@@ -6,8 +6,8 @@ def logining(phonenumber, msg, params=None):
     HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 ',
                'accept': '*/*'}
     datas = {
-        'email': 'moi',
-        'password': 'moitj2020'
+        'email': 'Your log in',
+        'password': 'Your password'
     }
 
     s = requests.Session()
