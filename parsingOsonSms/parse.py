@@ -21,7 +21,7 @@ def logining(phonenumber, msg, params=None):
         'sms_sender': 'MOI',
         'phonenumbers': phonenumber,
         'message': msg,
-        'login': 'moi'
+        'login': 'Your log in'
     }
     send = s.post("https://cab.osonsms.com/sms-rassylka/fast-send", data=datas2, headers=HEADERS, params=params)
     if send:
